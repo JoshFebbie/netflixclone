@@ -25,7 +25,7 @@ const MovieScreen = ({
 
   return (
     <div className="page">
-      <h1>Personal Theatre</h1>
+      <h1> My Personal Theatre</h1>
       <h3>Add a movie to your watchlist!</h3>
       <div className="btn-container">
         <button onClick={page !== 1 && decrement}>Previous</button>
