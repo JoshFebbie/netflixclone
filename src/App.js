@@ -19,6 +19,8 @@ function App() {
     setList(newState);
   };
 
+  //================================================================//
+
   // const getData = () => {
   //   axios
   //     .get(
@@ -33,6 +35,12 @@ function App() {
   // useEffect(() => {
   //   getData();
   // }, [page,]);
+
+  // Warning: Line 35:6: React Hook useEffect has a missing dependency: "getData". Either include it or remove the dependency array.
+
+  //================================================================//
+
+  //By using useCallback, you are ensuring that the getData function only changes when its dependencies change, which in this case is only the page variable. This prevents the useEffect hook from having an unnecessary dependency on getData, and it also improves performance by reducing the number of re-renders.
 
   const getData = useCallback(() => {
     axios
